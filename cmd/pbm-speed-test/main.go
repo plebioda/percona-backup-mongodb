@@ -41,7 +41,7 @@ var validCompressions = []string{
 func main() {
 	rootOptions := rootOpts{}
 	rootCmd := &cobra.Command{
-		Use:          "pbm-speed-test",
+		Use:          os.Args[0],
 		Short:        "Percona Backup for MongoDB compression and upload speed test",
 		SilenceUsage: true,
 	}

@@ -35,7 +35,7 @@ func main() {
 
 func rootCommand() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use:   "pbm-agent",
+		Use:   os.Args[0],
 		Short: "Percona Backup for MongoDB",
 		PreRunE: func(cmd *cobra.Command, args []string) error {
 			if err := loadConfig(); err != nil {

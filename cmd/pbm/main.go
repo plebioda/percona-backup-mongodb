@@ -111,7 +111,7 @@ func newPbmApp() *pbmApp {
 	app.ctx, app.cancel = context.WithCancel(context.Background())
 
 	app.rootCmd = &cobra.Command{
-		Use:                "pbm",
+		Use:                os.Args[0],
 		Short:              "Percona Backup for MongoDB",
 		PersistentPreRunE:  app.persistentPreRun,
 		PersistentPostRunE: app.persistentPostRun,
